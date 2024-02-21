@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <title>Date</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
 <body>
 
-  <h1>The audio element</h1>
+  <!-- partial:index.partial.html -->
 
-  <p>Click anywhere on the page to play a sound:</p>
+  <div class="container">
+    <h1>heyi Aditi<br>Would you like to go on a date with me?</h1>
+    <div class="buttons">
+      <button id="no-btn">No</button>
+      <button id="yes-btn">Yes</button>
+    </div>
+    <div class="popup" id="popup">
+      <p>Aww, thank you!</p>
+    </div>
+  </div>
 
-  <audio id="myAudio" controls>
-    <source src="horse.ogg" type="audio/ogg">
-    <source src="horse.mp3" type="audio/mpeg">
+  <script src="./script.js"></script>
+  <script src="./audio.js"></script>
+
+  <h1></h1>
+
+  <p></p>
+
+  <audio id="myAudio">
+    <source src="musical.ogg" type="audio/ogg">
+    <source src="musical.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
-  <script>
-    // Function to play audio
-    function playAudio() {
-      var audio = document.getElementById('myAudio');
-      audio.play();
-      
-      // Remove the click event listener after playing once
-      document.removeEventListener('click', playAudio);
-    }
-
-    // Add click event listener to the document
-    document.addEventListener('click', playAudio);
-  </script>
 
 </body>
 

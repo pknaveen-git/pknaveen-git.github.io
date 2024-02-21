@@ -1,0 +1,65 @@
+body {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  margin: 0;
+  background: url('upscaled_img1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #5cfafc; /* Updated color for the heading */
+}
+
+.buttons {
+  margin: 20px;
+}
+
+button {
+  font-size: 20px;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #a7fcfd; /* Updated color for the buttons */
+  color: #000; /* Black font color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
+}
+
+.popup {
+  display: none;
+  /* Remove styles that create the box */
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #5cfafc; /* Updated color for the popup text */
+}
+
+/* Add a smooth fade-in animation for the popup */
+.popup.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
