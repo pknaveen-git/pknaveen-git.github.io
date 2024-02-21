@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <h1>The audio element</h1>
+
+  <p>Click anywhere on the page to play a sound:</p>
+
+  <audio id="myAudio" controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Function to play audio
+    function playAudio() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+      
+      // Remove the click event listener after playing once
+      document.removeEventListener('click', playAudio);
+    }
+
+    // Add click event listener to the document
+    document.addEventListener('click', playAudio);
+  </script>
+
+</body>
+
+</html>
