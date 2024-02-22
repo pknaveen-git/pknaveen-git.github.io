@@ -9,11 +9,16 @@ noButton.addEventListener("mouseover", () => {
 });
 
 yesButton.addEventListener("click", () => {
+  // Play the sound when "Yes" is clicked
+  document.getElementById('yesSound').play();
+  
+  // Display the popup
   popup.style.display = "block";
-});
-
-popup.addEventListener("click", () => {
-  popup.style.display = "none";
+  
+  // Hide the popup after 2 seconds
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
 });
 
 // Hide the popup initially
