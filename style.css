@@ -2,9 +2,9 @@ body {
   font-family: 'Great Vibes', cursive;
   text-align: center;
   margin: 0;
-  background: url('watermelon_c1.gif') no-repeat center center fixed;
-  /*background-size: cover;*/
-  background-size: 50%; /* Adjust the percentage as needed */
+  background-color: black; /* Set the background color to black */
+  background: url('watermelon_c1.gif') no-repeat center bottom;
+  background-size: contain; /* Make the image smaller and contain within the area */
 }
 
 .container {
