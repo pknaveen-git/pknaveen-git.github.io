@@ -31,7 +31,7 @@ button {
   border: none;
   border-radius: 20px;
   /*background-color: #a7fcfd; /* Updated color for the buttons */
-  background-color: #b3b300; /* Updated color for the buttons */
+  background-color: #ffdd99; /* Updated color for the buttons */
   
   color: #000; /* Black font color */
   cursor: pointer;
@@ -40,7 +40,7 @@ button {
 
 button:hover {
   /*background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
-  background-color: #ffff80; /* Lighter shade on hover for a soft effect */
+  background-color: #ffb31a; /* Lighter shade on hover for a soft effect */
   
 }
 
