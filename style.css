@@ -3,8 +3,6 @@ body {
   text-align: center;
   margin: 0;
   background-color: black; /* Set the background color to black */
-  background: url('watermelon_c1.gif') no-repeat center bottom;
-  background-size: contain; /* Make the image smaller and contain within the area */
 }
 
 .container {
@@ -65,4 +63,18 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Additional CSS to place the GIF at the bottom center */
+body::before {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* Set desired width of the GIF */
+  height: 100px; /* Set desired height of the GIF */
+  background: url('watermelon_c1.gif') no-repeat center center;
+  background-size: contain;
+  z-index: -1; /* Ensure the GIF is behind the content */
 }
