@@ -72,8 +72,8 @@ body::before {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px; /* Set desired width of the GIF */
-  height: 100px; /* Set desired height of the GIF */
+  width: 300px; /* Set desired width of the GIF */
+  height: 300px; /* Set desired height of the GIF */
   background: url('watermelon_c1.gif') no-repeat center center;
   background-size: contain;
   z-index: -1; /* Ensure the GIF is behind the content */
