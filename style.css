@@ -20,6 +20,17 @@ h1 {
 
 }
 
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  /*color: #5cfafc; /* Updated color for the heading */
+  color: #ffff00; /* Updated color for the heading */
+  /* Add glossy and shiny effect with thin black outline */
+  /*text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);*/
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+}
+
 .buttons {
   margin: 20px;
 }
