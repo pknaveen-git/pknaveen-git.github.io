@@ -2,7 +2,8 @@ body {
   font-family: 'Great Vibes', cursive;
   text-align: center;
   margin: 0;
-  background-color: black; /* Set the background color to black */
+  background: url('upscaled_img1.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .container {
@@ -12,23 +13,9 @@ body {
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
-  /*color: #5cfafc; /* Updated color for the heading */
-  color: #ffff00; /* Updated color for the heading */
+  color: #5cfafc; /* Updated color for the heading */
   /* Add glossy and shiny effect with thin black outline */
-  /*text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);*/
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  /*color: #5cfafc; /* Updated color for the heading */
-  color: #ffff00; /* Updated color for the heading */
-  /* Add glossy and shiny effect with thin black outline */
-  /*text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);*/
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
 }
 
 .buttons {
@@ -41,18 +28,14 @@ button {
   margin: 10px;
   border: none;
   border-radius: 20px;
-  /*background-color: #a7fcfd; /* Updated color for the buttons */
-  background-color: #ffc34d; /* Updated color for the buttons */
-  
+  background-color: #a7fcfd; /* Updated color for the buttons */
   color: #000; /* Black font color */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  /*background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
-  background-color: #ffaa00; /* Lighter shade on hover for a soft effect */
-  
+  background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
 }
 
 .popup {
@@ -70,8 +53,7 @@ button:hover {
   z-index: 999;
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
-  /*color: #5cfafc; /* Updated color for the popup text */
-  color: #ffff00; /* Updated color for the popup text */
+  color: #5cfafc; /* Updated color for the popup text */
 }
 
 /* Add a smooth fade-in animation for the popup */
@@ -82,18 +64,4 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-/* Additional CSS to place the GIF at the bottom center */
-body::before {
-  content: '';
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px; /* Set desired width of the GIF */
-  height: 300px; /* Set desired height of the GIF */
-  background: url('watermelon_c1.gif') no-repeat center center;
-  background-size: contain;
-  z-index: -1; /* Ensure the GIF is behind the content */
 }
