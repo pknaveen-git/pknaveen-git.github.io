@@ -43,18 +43,16 @@ body {
 /* Position the "Aditi" text at the bottom center */
 .bottom-text {
   position: fixed;
-  bottom: 20px;  /* Adjust the distance from the bottom */
+  bottom: 12px;  /* Adjust the distance from the bottom */
   left: 50%;
   transform: translateX(-50%);  /* Center the text horizontally */
-  font-size: 72px;  /* Adjust the font size */
+  font-size: 108px;  /* Adjust the font size */
   margin-bottom: 30px;  /* Add space below the text */
   color: #faca64;  /* Greyish gold color */
   font-family: 'Pacifico', cursive;  /* Curvy and chubby font style */
   letter-spacing: 2px;  /* Slight space between letters */
   font-weight: bold;  /* Make it bold */
-  /* Add glowing effect with a soft halo around the text */
-  text-shadow: 
-    1px 1px 5px rgba(0, 0, 0, 0.5), /* Thin black outline */
-    0 0 10px rgba(250, 202, 100, 1), /* Soft gold glow */
-    0 0 15px rgba(250, 202, 100, 0.6); /* Extra glow for depth */
+  /* Thin black outline without glowing effect */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
