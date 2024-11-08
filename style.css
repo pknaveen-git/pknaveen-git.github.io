@@ -43,11 +43,11 @@ body {
 /* Position the "Aditi" text at the bottom center */
 .bottom-text {
   position: fixed;
-  bottom: 12px;  /* Adjust the distance from the bottom */
+  bottom: 8px;  /* Adjust the distance from the bottom */
   left: 50%;
   transform: translateX(-50%);  /* Center the text horizontally */
   font-size: 108px;  /* Adjust the font size */
-  margin-bottom: 30px;  /* Add space below the text */
+  margin-bottom: 15px;  /* Add space below the text */
   color: #faca64;  /* Greyish gold color */
   font-family: 'Pacifico', cursive;  /* Curvy and chubby font style */
   letter-spacing: 2px;  /* Slight space between letters */
