@@ -1,11 +1,11 @@
 /* Set the background wallpaper */
 body {
   margin: 0;
-  background: url('upscaled_img2.jpg') no-repeat center center fixed;
+  background: url('upscaled_img3.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-@media (max-width: 768px) {  /* For mobile and smaller screens */
+@media (max-width: 540px) {  /* For mobile and smaller screens */
   body {
     background-size: contain; /* Contain scales the image to fit */
     background-position: center top; /* Align it from the top */
