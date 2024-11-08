@@ -9,13 +9,16 @@
 
 <body>
 
-  <!-- Embedded video in the bottom right corner without the "muted" attribute -->
+  <!-- Embedded video in the bottom right corner -->
   <div class="video-container">
-    <video autoplay loop controls>
+    <video id="myVideo" autoplay muted loop>
       <source src="your_video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+    <button id="unmuteButton" onclick="unmuteVideo()">🔊 Click to Enable Sound</button>
   </div>
+
+  <script src="./script.js"></script>
 
 </body>
 
