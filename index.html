@@ -3,38 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Date</title>
+  <title>Embedded Video</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>heyi yo<br>Would you like to go on a date with me?</h1>
-    <div class="buttons">
-      <button id="no-btn">No</button>
-      <button id="yes-btn">Yes</button>
-    </div>
-    <div class="popup" id="popup">
-      <p>bhow, bhow 🐶</p>
-    </div>
+  <!-- Embedded video in the bottom right corner -->
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="your_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-
-  <script src="./script.js"></script>
-  <script src="./audio.js"></script>
-
-  <audio id="myAudio">
-    <source src="musical.ogg" type="audio/ogg">
-    <source src="musical.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Add the new sound -->
-  <audio id="yesSound">
-    <source src="sound.ogg" type="audio/ogg">
-    <source src="sound.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
 </body>
 
