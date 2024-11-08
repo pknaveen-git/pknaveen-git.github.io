@@ -9,6 +9,7 @@ video.addEventListener("ended", () => {
   
   if (playCount < 2) {
     video.currentTime = 0; // Restart the video
+    video.muted = false; // Ensure the video stays unmuted
     video.play(); // Play again
   } else {
     video.pause(); // Stop after 2 plays
