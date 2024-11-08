@@ -39,3 +39,16 @@ body {
   cursor: pointer;
   z-index: 1001;
 }
+
+/* Position the "Aditi" text at the bottom center */
+.bottom-text {
+  position: fixed;
+  bottom: 20px;  /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);  /* Center the text horizontally */
+  font-size: 36px;  /* Adjust the font size */
+  font-family: 'Arial', sans-serif; /* Optional: Choose a font style */
+  color: #B69D60;  /* Greyish gold color */
+  font-weight: bold;  /* Optional: Make it bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Optional: Add text shadow for better visibility */
+}
