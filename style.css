@@ -5,6 +5,13 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 768px) {  /* For mobile and smaller screens */
+  body {
+    background-size: contain; /* Contain scales the image to fit */
+    background-position: center top; /* Align it from the top */
+  }
+}
+
 /* Position the video in the bottom right corner */
 .video-container {
   position: fixed;
@@ -55,4 +62,5 @@ body {
   /* Thin black outline without glowing effect */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
 
