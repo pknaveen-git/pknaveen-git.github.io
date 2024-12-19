@@ -1,23 +1,25 @@
-// Function to unmute the video and hide the button
-function unmuteVideo() {
-  const video = document.getElementById("myVideo");
-  const unmuteButton = document.getElementById("unmuteButton");
-  
-  video.muted = false;      // Unmute the video
-  unmuteButton.style.display = "none";  // Hide the button
-}
+const noButton = document.getElementById("no-btn");
+const yesButton = document.getElementById("yes-btn");
+const popup = document.getElementById("popup");
 
-const video = document.getElementById("myVideo");
-let playCount = 0; // Initialize play count
-
-// Add an event listener to track when the video ends
-video.addEventListener("ended", () => {
-  playCount += 1; // Increment play count
-  
-  if (playCount < 2) {
-    video.currentTime = 0; // Restart the video
-    video.play(); // Play again
-  } else {
-    video.pause(); // Stop after 2 plays
-  }
+noButton.addEventListener("mouseover", () => {
+  noButton.style.position = "absolute";
+  noButton.style.left = Math.random() * 80 + "vw";
+  noButton.style.top = Math.random() * 80 + "vh";
 });
+
+yesButton.addEventListener("click", () => {
+  // Play the sound when "Yes" is clicked
+  document.getElementById('yesSound').play();
+  
+  // Display the popup
+  popup.style.display = "block";
+  
+  // Hide the popup after 2 seconds
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
+});
+
+// Hide the popup initially
+popup.style.display = "none";
