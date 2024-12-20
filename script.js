@@ -36,6 +36,9 @@ const animateButtons = (words) => {
 
 // Event listener for click on the body to start the animation
 document.body.addEventListener("click", () => {
+  // Make the heading text visible after click
+  headingText.style.visibility = "visible"; // This will make the text visible
+
   const words = splitText(headingText.textContent);
   headingText.innerHTML = ""; // Clear original text
   words.forEach(word => headingText.appendChild(word)); // Append new word spans
