@@ -11,7 +11,7 @@ noButton.addEventListener("mouseover", () => {
 yesButton.addEventListener("click", () => {
   // Play the sound when "Yes" is clicked
   document.getElementById('yesSound').play();
-  
+  // 
   // Display the popup
   popup.style.display = "block";
   
