@@ -16,6 +16,7 @@ h1 {
   color: #5cfafc;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
   visibility: hidden; /* Hide the text initially */
+  line-height: 1.5; /* Ensure spacing between lines */
 }
 
 .buttons {
@@ -58,6 +59,7 @@ button:hover {
 
 .word {
   opacity: 0; /* Initially invisible */
+  margin-right: 10px; /* Add spacing between words */
 }
 
 .dust-animation {
