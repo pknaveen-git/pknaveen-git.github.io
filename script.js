@@ -23,19 +23,8 @@ const animateWords = (words) => {
   });
 };
 
-// Function to animate buttons after text animation is complete
-const animateButtons = (words) => {
-  setTimeout(() => {
-    noButton.classList.add("dust-animation");
-  }, (words.length * 800) + 800); // No button appears after the last word and 800ms
-
-  setTimeout(() => {
-    yesButton.classList.add("dust-animation");
-  }, (words.length * 800) + 1600); // Yes button appears after 800ms delay from No button
-};
-
-// Event listener for click on the document to start the animation
-document.addEventListener("click", () => {
+// Initialize text animation after page load
+window.addEventListener("load", () => {
   const words = splitText(headingText.textContent);
   headingText.innerHTML = ""; // Clear original text
   words.forEach(word => headingText.appendChild(word)); // Append new word spans
@@ -66,3 +55,14 @@ yesButton.addEventListener("click", () => {
 
 // Hide the popup initially
 popup.style.display = "none";
+
+// Function to animate buttons after text animation is complete
+const animateButtons = (words) => {
+  setTimeout(() => {
+    noButton.classList.add("dust-animation");
+  }, (words.length * 800) + 800); // No button appears after the last word and 800ms
+
+  setTimeout(() => {
+    yesButton.classList.add("dust-animation");
+  }, (words.length * 800) + 1600); // Yes button appears after 800ms delay from No button
+};
