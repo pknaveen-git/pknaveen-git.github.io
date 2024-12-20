@@ -19,7 +19,7 @@ const animateWords = (words) => {
   words.forEach((word, index) => {
     setTimeout(() => {
       word.classList.add("dust-animation");
-    }, index * 300); // 300ms gap between words
+    }, index * 800); // 800ms gap between words
   });
 };
 
@@ -59,11 +59,11 @@ popup.style.display = "none";
 const animateButtons = () => {
   setTimeout(() => {
     noButton.classList.add("dust-animation");
-  }, 1500); // No button appears after 1.5s
+  }, (words.length * 800) + 800); // No button appears after the last word and 800ms
 
   setTimeout(() => {
     yesButton.classList.add("dust-animation");
-  }, 1800); // Yes button appears after 1.8s
+  }, (words.length * 800) + 1600); // Yes button appears after 800ms delay from No button
 };
 
 // Trigger button animation after the words are animated

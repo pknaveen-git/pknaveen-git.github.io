@@ -1,4 +1,3 @@
-/* General styling for the body */
 body {
   font-family: 'Great Vibes', cursive;
   text-align: center;
@@ -7,84 +6,38 @@ body {
   background-size: cover;
 }
 
-/* Container styling */
 .container {
   padding: 30px;
 }
 
-/* Heading (h1) styling */
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
-  color: #5cfafc; /* Updated color for the heading */
+  color: #5cfafc;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
-  display: inline-block;
 }
 
-/* Individual word styling for animation */
-.word {
-  opacity: 0;
-  display: inline-block;
-  font-size: inherit; /* Matches the h1 font size */
-  color: inherit; /* Matches the h1 color */
-  animation: none; /* Animation applied dynamically */
-  visibility: visible; /* Ensure words are visible during animation */
-}
-
-/* Animation applied to words */
-.word.dust-animation {
-  animation: dustEffect 1s ease forwards; /* Custom animation for dust effect */
-}
-
-/* Keyframes for dust animation */
-@keyframes dustEffect {
-  0% {
-    opacity: 0;
-    transform: scale(0.8) translateY(10px);
-    filter: blur(5px);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1) translateY(0);
-    filter: blur(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    filter: blur(0);
-  }
-}
-
-/* Buttons container */
 .buttons {
   margin: 20px;
 }
 
-/* Button styling */
 button {
   font-size: 20px;
   padding: 12px 24px;
   margin: 10px;
   border: none;
   border-radius: 20px;
-  background-color: #a7fcfd; /* Updated button color */
-  color: #000; /* Black text color */
+  background-color: #a7fcfd;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  opacity: 0; /* Hidden initially */
+  opacity: 0; /* Initially invisible */
 }
 
-/* Hover effect for buttons */
 button:hover {
-  background-color: #cbfcfd; /* Lighter shade for soft effect */
+  background-color: #cbfcfd;
 }
 
-/* Animation applied to buttons */
-button.dust-animation {
-  animation: dustEffect 1s ease forwards; /* Same dust animation as words */
-}
-
-/* Popup styling */
 .popup {
   display: none;
   background-color: transparent;
@@ -99,19 +52,24 @@ button.dust-animation {
   z-index: 999;
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
-  color: #5cfafc; /* Updated color for the popup text */
+  color: #5cfafc;
 }
 
-/* Smooth fade-in animation for the popup */
-.popup.fade-in {
-  animation: fadeIn 0.3s ease;
+.word {
+  opacity: 0; /* Initially invisible */
 }
 
-@keyframes fadeIn {
-  from {
+.dust-animation {
+  animation: dustEffect 1s ease forwards;
+}
+
+@keyframes dustEffect {
+  0% {
     opacity: 0;
+    transform: scale(0.3);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
