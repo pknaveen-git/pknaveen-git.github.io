@@ -4,6 +4,12 @@ const popup = document.getElementById("popup");
 const line1 = document.getElementById("line-1");
 const line2 = document.getElementById("line-2");
 
+// Store original text content for h1 and h2
+const originalText = {
+  line1: line1.textContent,
+  line2: line2.textContent,
+};
+
 // Function to apply dust effect animation to text line by line
 const animateLine = (line, delay, callback) => {
   const words = splitText(line.textContent);
@@ -67,6 +73,11 @@ noButton.addEventListener("mouseover", () => {
 yesButton.addEventListener("click", () => {
   document.getElementById('yesSound').play(); // Play sound
   popup.style.display = "block"; // Show popup
+
+  // Restore original text with spaces for h1 and h2
+  line1.textContent = originalText.line1;
+  line2.textContent = originalText.line2;
+
   setTimeout(() => popup.style.display = "none", 3000); // Hide popup after 3s
 });
 
