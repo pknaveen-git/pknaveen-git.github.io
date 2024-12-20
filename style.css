@@ -12,7 +12,7 @@ body {
   padding: 30px;
 }
 
-/* Styling for the main heading text */
+/* Styling for the main heading text container */
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
@@ -20,6 +20,20 @@ h1 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
   display: inline-block;
   opacity: 0; /* Hidden initially */
+}
+
+/* Styling for individual words in the heading */
+.word {
+  opacity: 0;
+  display: inline-block;
+  animation: none;
+  font-size: inherit; /* Ensure font size matches the h1 */
+  color: inherit; /* Inherit color for consistency */
+}
+
+/* Dust animation for words and buttons */
+.word.dust-animation, button.dust-animation {
+  animation: dustEffect 1s ease forwards; /* Smooth transition */
 }
 
 /* Styling for buttons */
@@ -70,17 +84,6 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-/* Dust animation for words and buttons */
-.word, button {
-  opacity: 0;
-  display: inline-block;
-  animation: none;
-}
-
-.dust-animation {
-  animation: dustEffect 1s ease forwards; /* Smooth transition */
 }
 
 /* Define the dust effect animation */
