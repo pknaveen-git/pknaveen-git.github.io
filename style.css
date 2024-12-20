@@ -1,4 +1,4 @@
-/* General body styling */
+/* General styling for the body */
 body {
   font-family: 'Great Vibes', cursive;
   text-align: center;
@@ -7,55 +7,81 @@ body {
   background-size: cover;
 }
 
-/* Container for the main content */
+/* Container styling */
 .container {
   padding: 30px;
 }
 
-/* Styling for the main heading text container */
+/* Heading (h1) styling */
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
   color: #5cfafc; /* Updated color for the heading */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
   display: inline-block;
-  opacity: 0; /* Hidden initially */
 }
 
-/* Styling for individual words in the heading */
+/* Individual word styling for animation */
 .word {
   opacity: 0;
   display: inline-block;
-  animation: none;
-  font-size: inherit; /* Ensure font size matches the h1 */
-  color: inherit; /* Inherit color for consistency */
+  font-size: inherit; /* Matches the h1 font size */
+  color: inherit; /* Matches the h1 color */
+  animation: none; /* Animation applied dynamically */
+  visibility: visible; /* Ensure words are visible during animation */
 }
 
-/* Dust animation for words and buttons */
-.word.dust-animation, button.dust-animation {
-  animation: dustEffect 1s ease forwards; /* Smooth transition */
+/* Animation applied to words */
+.word.dust-animation {
+  animation: dustEffect 1s ease forwards; /* Custom animation for dust effect */
 }
 
-/* Styling for buttons */
+/* Keyframes for dust animation */
+@keyframes dustEffect {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    filter: blur(5px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1) translateY(0);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Buttons container */
 .buttons {
   margin: 20px;
 }
 
+/* Button styling */
 button {
   font-size: 20px;
   padding: 12px 24px;
   margin: 10px;
   border: none;
   border-radius: 20px;
-  background-color: #a7fcfd; /* Updated color for the buttons */
-  color: #000; /* Black font color */
+  background-color: #a7fcfd; /* Updated button color */
+  color: #000; /* Black text color */
   cursor: pointer;
   transition: background-color 0.3s ease;
   opacity: 0; /* Hidden initially */
 }
 
+/* Hover effect for buttons */
 button:hover {
-  background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
+  background-color: #cbfcfd; /* Lighter shade for soft effect */
+}
+
+/* Animation applied to buttons */
+button.dust-animation {
+  animation: dustEffect 1s ease forwards; /* Same dust animation as words */
 }
 
 /* Popup styling */
@@ -82,25 +108,10 @@ button:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Define the dust effect animation */
-@keyframes dustEffect {
-  0% {
+  from {
     opacity: 0;
-    transform: scale(0.8) translateY(10px);
-    filter: blur(5px);
   }
-  50% {
-    opacity: 0.5;
-    transform: scale(1) translateY(0);
-    filter: blur(2px);
-  }
-  100% {
+  to {
     opacity: 1;
-    transform: scale(1) translateY(0);
-    filter: blur(0);
   }
 }
