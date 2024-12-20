@@ -29,6 +29,7 @@ window.addEventListener("load", () => {
   headingText.innerHTML = ""; // Clear original text
   words.forEach(word => headingText.appendChild(word)); // Append new word spans
   animateWords(words); // Animate words one by one
+  animateButtons(words); // Trigger button animations after text animation
 });
 
 // Event listener for 'No' button: Moves the button around
@@ -56,7 +57,7 @@ yesButton.addEventListener("click", () => {
 popup.style.display = "none";
 
 // Function to animate buttons after text animation is complete
-const animateButtons = () => {
+const animateButtons = (words) => {
   setTimeout(() => {
     noButton.classList.add("dust-animation");
   }, (words.length * 800) + 800); // No button appears after the last word and 800ms
@@ -65,6 +66,3 @@ const animateButtons = () => {
     yesButton.classList.add("dust-animation");
   }, (words.length * 800) + 1600); // Yes button appears after 800ms delay from No button
 };
-
-// Trigger button animation after the words are animated
-window.addEventListener("load", animateButtons);
