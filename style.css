@@ -17,7 +17,7 @@ h1, h2 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
   visibility: hidden; /* Hide the text initially */
   line-height: 1.5;
-  display: inline-block;
+  display: block; /* Ensure each line appears on a new line */
   text-align: center;
 }
 
