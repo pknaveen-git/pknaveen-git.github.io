@@ -10,12 +10,15 @@ body {
   padding: 30px;
 }
 
-h1 {
+h1, h2 {
   font-size: 36px;
   margin-bottom: 30px;
-  color: #5cfafc; /* Updated color for the heading */
-  /* Add glossy and shiny effect with thin black outline */
+  color: #5cfafc;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
+  visibility: hidden; /* Hide the text initially */
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
 }
 
 .buttons {
@@ -28,19 +31,19 @@ button {
   margin: 10px;
   border: none;
   border-radius: 20px;
-  background-color: #a7fcfd; /* Updated color for the buttons */
-  color: #000; /* Black font color */
+  background-color: #a7fcfd;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  opacity: 0; /* Initially invisible */
 }
 
 button:hover {
-  background-color: #cbfcfd; /* Lighter shade on hover for a soft effect */
+  background-color: #cbfcfd;
 }
 
 .popup {
   display: none;
-  /* Remove styles that create the box */
   background-color: transparent;
   border: none;
   border-radius: 0;
@@ -53,15 +56,25 @@ button:hover {
   z-index: 999;
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
-  color: #5cfafc; /* Updated color for the popup text */
+  color: #5cfafc;
 }
 
-/* Add a smooth fade-in animation for the popup */
-.popup.fade-in {
-  animation: fadeIn 0.3s ease;
+.word {
+  opacity: 0; /* Initially invisible */
+  margin-right: 10px; /* Add spacing between words */
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.dust-animation {
+  animation: dustEffect 1s ease forwards;
+}
+
+@keyframes dustEffect {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
