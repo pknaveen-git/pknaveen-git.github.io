@@ -1,7 +1,8 @@
 const noButton = document.getElementById("no-btn");
 const yesButton = document.getElementById("yes-btn");
 const popup = document.getElementById("popup");
-const headingText = document.querySelector("h1");
+const headingText1 = document.querySelector("h1");
+const headingText2 = document.querySelector("h2"); // Added-2
 
 // Function to split the heading text into words and wrap each word in a span
 const splitText = (text) => {
@@ -37,11 +38,15 @@ const animateButtons = (words) => {
 // Event listener for click on the body to start the animation
 document.body.addEventListener("click", () => {
   // Make the heading text visible after click
-  headingText.style.visibility = "visible"; // This will make the text visible
+  headingText1.style.visibility = "visible"; // This will make the text visible
+  headingText2.style.visibility = "visible"; // This will make the text visible // Added-2
 
-  const words = splitText(headingText.textContent);
-  headingText.innerHTML = ""; // Clear original text
-  words.forEach(word => headingText.appendChild(word)); // Append new word spans
+  const words = splitText(headingText1.textContent);
+  const words = splitText(headingText2.textContent);
+  headingText1.innerHTML = ""; // Clear original text
+  headingText2.innerHTML = ""; // Clear original text // Added-2
+  words.forEach(word => headingText1.appendChild(word)); // Append new word spans
+  words.forEach(word => headingText2.appendChild(word)); // Append new word spans // Added-2
   animateWords(words); // Animate words one by one
   animateButtons(words); // Trigger button animations after text animation
 });
