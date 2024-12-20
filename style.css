@@ -10,7 +10,7 @@ body {
   padding: 30px;
 }
 
-h1 {
+h1, h2 {
   font-size: 36px;
   margin-bottom: 30px;
   color: #5cfafc;
@@ -18,7 +18,11 @@ h1 {
   visibility: hidden; /* Hide the text initially */
   line-height: 1.5; /* Ensure spacing between lines */
   display: inline-block; /* Align the content as inline-block for center alignment */
-  text-align: center; /* Ensure center alignment of the two lines */
+  text-align: center; /* Ensure center alignment of both headings */
+}
+
+h2 {
+  margin-top: 0; /* Remove extra space before the second heading */
 }
 
 .buttons {
