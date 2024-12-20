@@ -17,6 +17,8 @@ h1 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(92, 250, 252, 0.8);
   visibility: hidden; /* Hide the text initially */
   line-height: 1.5; /* Ensure spacing between lines */
+  display: inline-block; /* Align the content as inline-block for center alignment */
+  text-align: center; /* Ensure center alignment of the two lines */
 }
 
 .buttons {
